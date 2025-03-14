@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center mb-4">Student List</h2><hr>
+    <div class="row">
+        {% for student in students %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Mr. {{ student.name }}</h5>
+                    <p class="card-text">
+                        <strong>Email:</strong> {{ student.email }}<br>
+                        <strong>Phone:</strong> {{ student.phone }}<br>
+                        <strong>Course:</strong> {{ student.course }}
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'student_update' student.id %}" class="btn btn-warning btn-sm">Edit</a>
+                        <!-- Delete button triggers Bootstrap Modal -->
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal{{ student.id }}">
+                            Delete
+                        </button>
+                        
+                        <!-- Bootstrap Modal for Delete Confirmation -->
+                        <div class="modal fade" id="deleteModal{{ student.id }}" tabindex="-1" aria-labelledby="deleteModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete {{ student.name }}?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <a href="{% url 'student_delete' student.id %}" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center">No students registered yet.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
