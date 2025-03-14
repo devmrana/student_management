@@ -1,65 +1,60 @@
-Project Proposal: "Student Management System
-This project will be a beginner-friendly yet practical application designed to help you understand
+#Project Proposal: "Student Management System
+This project will be a beginner-friendly yet practical application designed to help you understand and implement the concepts of forms, CRUD operations, and template management effectively.
 
-and implement the concepts of forms, CRUD operations, and template management effectively.
-
-Objective
+Objective:
 
 Create a simple web-based system to manage students' records, including adding, updating,
+viewing, and deleting information, while utilizing Django features like HTML forms, model forms, class-based views, and template inheritance.
 
-viewing, and deleting information, while utilizing Django features like HTML forms, model forms,
-
-class-based views, and template inheritance.
-
-Key Features
+Key Features:
 
 1. Student Registration
 
-Use HTML Forms to collect basic details such as:
+    Use HTML Forms to collect basic details such as:
 
-Name, Email, Phone Number, Course.
+    Name, Email, Phone Number, Course.
 
-Apply HTML Built-in Validation (e.g., required fields, proper email format).
+    Apply HTML Built-in Validation (e.g., required fields, proper email format).
 
 2. Student List Page
 
-Display all registered students using a template.
+    Display all registered students using a template.
 
-Create reusable templates for listing CRUD data.
+    Create reusable templates for listing CRUD data.
 
 3. CRUD Operations
 
-Create: Add a new student using Model Forms.
+    Create: Add a new student using Model Forms.
 
-Read: Display student details on a detailed view page.
+    Read: Display student details on a detailed view page.
 
-Update: Edit student details using GET & POST requests.
+    Update: Edit student details using GET & POST requests.
 
-Delete: Remove a student using a DELETE request.
+    Delete: Remove a student using a DELETE request.
 
 4. Template Features
 
-Implement Template Inheritance to structure pages (base.html for navbar, footer, etc.).
+    Implement Template Inheritance to structure pages (base.html for navbar, footer, etc.).
 
-Use Template Blocks for customizing sections like forms, lists, and messages.
+    Use Template Blocks for customizing sections like forms, lists, and messages.
 
 5. Message Framework
 
-Show success/error messages (exmp., "Student added successfully", "Record deleted").
+    Show success/error messages (exmp., "Student added successfully", "Record deleted").
 
-Tools & Technologies
+Tools & Technologies:
 
-Frontend: HTML, CSS (optional for styling).
+    Frontend: HTML, CSS (optional for styling).
 
-Backend: Django (Focus on forms, views, templates).
+    Backend: Django (Focus on forms, views, templates).
 
-Database: SQLite (default Django database).
+    Database: SQLite (default Django database).
 
-Learning Outcomes
+    Learning Outcomes
 
-Understand HTML forms and their validation.
+    Understand HTML forms and their validation.
 
-Learn how to use Django Model Forms for database integration.
+    Learn how to use Django Model Forms for database integration.
 
 Master CRUD operations with GET, POST, UPDATE, DELETE requests.
 
